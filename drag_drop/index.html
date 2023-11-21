@@ -23,12 +23,12 @@
                 <form name="task">
                     <input type="text" id="name" name="title" placeholder="Название задания">
                     <input type="text" name="description" placeholder="Описание задания">
-                    <select name="status" id="select">
-                        <option value="todo">go home</option>
-                        <option value="inprogress">В процессе</option>
-                        <option value="done" class="done">Готово</option>
+                    <select name="status" id="">
+                        <option value="0">go home</option>
+                        <option value="1">В процессе</option>
+                        <option value="2">Готово</option>
                     </select>
-                    <button class="">Готово</button>
+                    <button>Готово</button>
                 </form>
             </div>
         </div>
@@ -185,14 +185,14 @@
                         </nav>
                     </div>
                     <div class="emptys">
-                        <div class="empty">
+                        <div class="empty" data-status="0">
                             <span>go home</span>
                         </div>
-                        <div class="empty">
+                        <div class="empty" data-status="1">
                             <span>В процессе</span>
 
                         </div>
-                        <div class="empty">
+                        <div class="empty" data-status="2">
                             <span>Готово</span>
 
                         </div>
@@ -200,12 +200,17 @@
                             <li><img src="./public/img/Icon_add.png" alt="">Добавьте еще одну колонку</li>
                         </div>
                     </div>
+                    <div class="bucket">
+                        <img class="img_bucket" src="./public/img/bucket.png" alt="">
+                    </div>
                 </div>
             </section>
+
         </div>
     </main>
 
     <script type="module" src="./main.js"></script>
+    <script type="module" src="./module/form.js"></script>
 </body>
 
 </html>
