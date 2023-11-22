@@ -49,7 +49,12 @@ bucket.ondrop = () => {
     let div = document.querySelector('#marked')
     let task_id = div.dataset.id
     console.log(task_id);
-    deleteData('/tasks/' + task_id);
+    deleteData('/tasks/' + task_id)
+        .then(res => {
+            if (res.status === 200 || res.status === 201) {
+                alert(  'delete success' + `  ID: ${task_id}`)
+            }
+        })
     div.remove()
 };
 

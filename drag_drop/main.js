@@ -1,4 +1,4 @@
-import { deleteData, getData } from "./module/helpers"
+import { getData } from "./module/helpers"
 import { dragDrop, dragEnter, dragLeave, dragOver } from "./module/dragNdrop"
 import { reload_todo } from "./module/ui"
 
