@@ -475,7 +475,7 @@ form button {
 .img_bucket{
     position: relative;
     width: 5%;
-    top: 253px;
+    top: 320px;
     left: 90%;
     transition:cubic-bezier(0.175, 0.885, 0.32, 1.275) ease-in;
     

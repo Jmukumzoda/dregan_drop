@@ -1,4 +1,4 @@
-import { dragEnd,dragStart } from "./dragNdrop"
+import { dragEnd, dragStart } from "./dragNdrop"
 export function reload_todo(arr, places) {
     places.forEach(el => el.innerHTML = "")
 
@@ -23,8 +23,6 @@ export function reload_todo(arr, places) {
 
         div.ondragstart = dragStart
         div.ondragend = dragEnd
-       
-       
 
     }
 }
