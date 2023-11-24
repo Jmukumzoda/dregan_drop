@@ -71,13 +71,30 @@ header {
     align-items: center;
 }
 
-.nav_left input {
+.inp {
     border-radius: 5px;
     border: 1px solid rgba(166, 197, 226, 0.16);
     background: #22272B;
     height: 24px;
     padding: 5px;
     color: #fff;
+    transition: 10s linear;
+}
+
+.inp:focus {
+    border-radius: 5px;
+    border: 1px solid rgba(166, 197, 226, 0.16);
+    background: #22272B;
+    width: 380px;
+    height: 24px;
+    padding: 5px;
+    color: #fff;
+}
+
+.navn1 {
+    display: flex;
+    width: 80%;
+    align-items: center;
 }
 
 .sec1 {
@@ -473,6 +490,7 @@ form button {
 }
 
 .img_bucket {
+    display: none;
     position: relative;
     width: 5%;
     top: 320px;

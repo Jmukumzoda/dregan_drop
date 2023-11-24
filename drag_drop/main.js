@@ -1,14 +1,42 @@
-import { getData } from "./module/helpers"
+import { getData, deleteData } from "./module/helpers"
 import { dragDrop, dragEnter, dragLeave, dragOver } from "./module/dragNdrop"
 import { reload_todo } from "./module/ui"
 
 let close_aside = document.querySelector('.img')
 let aside = document.querySelector('.sec1')
 export let bucket = document.querySelector('.bucket')
+export let bucketimg = document.querySelector('.bucket img')
 export const emptie = document.querySelectorAll('.empty')
+let inp = document.querySelector('.inp')
+
+inp.onkeyup = () => {
+    let fill = document.querySelectorAll('.fill')
+    getData('/tasks')
+        .then(res => {
+            console.log(res);
+        })
+}
 
 
 
+bucket.ondragover = (e) => {
+    e.preventDefault()
+}
+
+
+
+bucket.ondrop = () => {
+    let div = document.querySelector('#marked')
+    let task_id = div.dataset.id
+    console.log(task_id);
+    deleteData('/tasks/' + task_id)
+        .then(res => {
+            if (res.status === 200 || res.status === 201) {
+                alert('delete success' + `  ID: ${task_id}`)
+            }
+        })
+    div.remove()
+};
 
 close_aside.onclick = () => {
     close_aside.setAttribute = "/img/Frame.png"
